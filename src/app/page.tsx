@@ -6,6 +6,7 @@ import { Footer } from '@/components/Footer';
 import { useLanguage } from '@/context/LanguageContext';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
+import Link from 'next/link';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ArrowRight, Leaf, Shield, Users, TrendingUp } from 'lucide-react';
 
@@ -41,12 +42,16 @@ export default function Home() {
                 {t('hero.subtitle')}
               </p>
               <div className="flex space-x-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8">
-                  {t('hero.cta')}
-                </Button>
-                <Button size="lg" variant="outline" className="border-accent text-accent">
-                  {t('nav.about')}
-                </Button>
+                <Link href="/projects" passHref>
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8">
+                    {t('hero.cta')}
+                  </Button>
+                </Link>
+                <Link href="/about" passHref>
+                  <Button size="lg" variant="outline" className="border-accent text-accent">
+                    {t('nav.about')}
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -66,7 +71,7 @@ export default function Home() {
               </div>
               <div>
                 <p className="text-4xl font-headline font-bold text-primary mb-2">12</p>
-                <p className="text-sm opacity-80 uppercase tracking-widest">Countries</p>
+                <p className="text-sm opacity-80 uppercase tracking-widest">Pays</p>
               </div>
               <div>
                 <p className="text-4xl font-headline font-bold text-primary mb-2">30+</p>
@@ -80,7 +85,7 @@ export default function Home() {
         <section className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-headline font-bold text-accent mb-4">Driving Change Together</h2>
+              <h2 className="text-3xl md:text-5xl font-headline font-bold text-accent mb-4">Innover Ensemble pour Demain</h2>
               <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
             </div>
 
@@ -89,8 +94,8 @@ export default function Home() {
                 <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary group-hover:text-white transition-colors">
                   <Leaf className="h-7 w-7" />
                 </div>
-                <h3 className="text-xl font-headline font-bold mb-4">Sustainability</h3>
-                <p className="text-muted-foreground">Implementing eco-friendly solutions that preserve resources for future generations while promoting economic growth.</p>
+                <h3 className="text-xl font-headline font-bold mb-4">Durabilité</h3>
+                <p className="text-muted-foreground">Mettre en œuvre des solutions respectueuses de l'environnement qui préservent les ressources tout en favorisant la croissance.</p>
               </div>
 
               <div className="p-8 rounded-2xl bg-secondary hover:shadow-xl transition-all border border-transparent hover:border-primary/20 group">
@@ -98,15 +103,15 @@ export default function Home() {
                   <TrendingUp className="h-7 w-7" />
                 </div>
                 <h3 className="text-xl font-headline font-bold mb-4">Innovation</h3>
-                <p className="text-muted-foreground">Leveraging technology and research to solve complex social and industrial challenges across the continent.</p>
+                <p className="text-muted-foreground">Exploiter la technologie et la recherche pour résoudre les défis sociaux et industriels complexes à travers le continent.</p>
               </div>
 
               <div className="p-8 rounded-2xl bg-secondary hover:shadow-xl transition-all border border-transparent hover:border-primary/20 group">
                 <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary group-hover:text-white transition-colors">
                   <Users className="h-7 w-7" />
                 </div>
-                <h3 className="text-xl font-headline font-bold mb-4">Community</h3>
-                <p className="text-muted-foreground">Building a robust network of professionals and organizations dedicated to collective advancement.</p>
+                <h3 className="text-xl font-headline font-bold mb-4">Communauté</h3>
+                <p className="text-muted-foreground">Bâtir un réseau solide de professionnels et d'organisations dédiés à l'avancement collectif de l'Afrique.</p>
               </div>
             </div>
           </div>
@@ -115,10 +120,12 @@ export default function Home() {
         {/* Call to Action */}
         <section className="py-24 bg-primary text-white">
           <div className="max-w-5xl mx-auto px-4 text-center">
-            <h2 className="text-4xl md:text-6xl font-headline font-bold mb-8">Ready to join our community of innovators?</h2>
-            <Button size="lg" className="bg-accent text-white hover:bg-accent/90 px-10 h-14 text-lg">
-              {t('nav.join')} <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <h2 className="text-4xl md:text-6xl font-headline font-bold mb-8">Prêt à rejoindre notre communauté d'innovateurs ?</h2>
+            <Link href="/join" passHref>
+              <Button size="lg" className="bg-accent text-white hover:bg-accent/90 px-10 h-14 text-lg">
+                {t('nav.join')} <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </section>
       </main>
