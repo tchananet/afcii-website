@@ -4,8 +4,8 @@ import './globals.css';
 import { LanguageProvider } from '@/context/LanguageContext';
 
 export const metadata: Metadata = {
-  title: 'AFCII Connect - Growth & Innovation',
-  description: 'The African Center for Innovation and Integration Connect platform.',
+  title: 'AFCII - African Center for Incubation and Innovation',
+  description: 'Plateforme de l\'African Center for Incubation and Innovation (A.F.C.I.I.).',
 };
 
 export default function RootLayout({
@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

@@ -31,6 +31,24 @@
       "imageHint": "education training"
     },
     {
+      "id": "project-gansang",
+      "description": "Agriculture and gansang cultivation",
+      "imageUrl": "https://picsum.photos/seed/gansang/800/600",
+      "imageHint": "agriculture farm"
+    },
+    {
+      "id": "project-fruit",
+      "description": "Exotic fruit trees",
+      "imageUrl": "https://picsum.photos/seed/fruit/800/600",
+      "imageHint": "fruit trees"
+    },
+    {
+      "id": "project-ceramic",
+      "description": "Pottery and ceramic craft",
+      "imageUrl": "https://picsum.photos/seed/ceramic/800/600",
+      "imageHint": "pottery craft"
+    },
+    {
       "id": "partner-logo-1",
       "description": "Generic partner logo",
       "imageUrl": "https://picsum.photos/seed/partner1/200/100",

@@ -3,75 +3,65 @@
 
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
-import { useLanguage } from '@/context/LanguageContext';
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, CheckCircle2 } from 'lucide-react';
 
 const projects = [
   {
     id: 1,
-    title: 'Green Grid Senegal',
-    category: 'Energy',
-    status: 'Ongoing',
-    description: 'Developing sustainable micro-grids for rural communities in northern Senegal.',
-    imgId: 'project-energy'
+    title: 'Projet culture du gansang',
+    category: 'Agriculture',
+    status: 'Pilote',
+    description: 'Ce projet vise à étudier les possibilités de domestication et de culture du gansang afin de favoriser sa valorisation économique.',
+    objectives: [
+      'Expérimenter la culture',
+      'Analyser la rentabilité',
+      'Promouvoir sa diffusion auprès des agriculteurs'
+    ],
+    imgId: 'project-gansang'
   },
   {
     id: 2,
-    title: 'TechEdu Hub',
-    category: 'Education',
-    status: 'Completed',
-    description: 'Digital literacy platform for over 10,000 students across 50 regional schools.',
-    imgId: 'project-education'
+    title: 'Projet cultures fruitières innovantes',
+    category: 'Botanique',
+    status: 'Pilote',
+    description: 'Ce projet explore la possibilité d’adapter certaines cultures fruitières exotiques aux conditions locales.',
+    imgId: 'project-fruit'
   },
   {
     id: 3,
-    title: 'Innovation Lab 2024',
-    category: 'Research',
-    status: 'Ongoing',
-    description: 'Supporting tech startups with mentorship, funding, and R&D facilities.',
-    imgId: 'innovation-research'
-  },
-  {
-    id: 4,
-    title: 'AgriTech Initiative',
-    category: 'Agriculture',
-    status: 'Planned',
-    description: 'IoT solutions for smart farming to optimize water usage in arid regions.',
-    imgId: 'hero-sustainability'
+    title: 'Projet céramique et artisanat',
+    category: 'Artisanat',
+    status: 'Pilote',
+    description: 'Ce projet vise à valoriser les techniques traditionnelles de poterie tout en intégrant des approches innovantes.',
+    imgId: 'project-ceramic'
   }
 ];
 
 export default function ProjectsPage() {
-  const { t } = useLanguage();
-
   return (
     <div className="flex flex-col min-h-screen">
       <Navigation />
       
       <main className="flex-grow py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-            <div className="max-w-2xl">
-              <h1 className="text-4xl md:text-6xl font-headline font-bold text-accent mb-4">Our Projects</h1>
-              <p className="text-muted-foreground text-lg">Concrete actions that transform ideas into reality. Explore our portfolio of innovation and sustainability.</p>
-            </div>
-            <div className="flex space-x-2">
-               <Badge className="bg-primary hover:bg-primary/90 text-white px-4 py-2 cursor-pointer">All</Badge>
-               <Badge variant="outline" className="border-accent text-accent px-4 py-2 cursor-pointer hover:bg-accent/5">Ongoing</Badge>
-               <Badge variant="outline" className="border-accent text-accent px-4 py-2 cursor-pointer hover:bg-accent/5">Completed</Badge>
-            </div>
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-headline font-bold text-accent mb-4">Page Projets</h1>
+            <p className="text-primary font-bold text-xl uppercase tracking-widest mb-6">Projets pilotes</p>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+              L’AFCII développe des projets expérimentaux visant à tester des solutions innovantes avant leur diffusion à grande échelle.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {projects.map((project) => {
               const projectImg = PlaceHolderImages.find(img => img.id === project.imgId);
               return (
-                <Card key={project.id} className="group overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-300">
+                <Card key={project.id} className="group overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-300 bg-secondary/20">
                   <div className="relative h-64 w-full overflow-hidden">
                     <Image
                       src={projectImg?.imageUrl || ''}
@@ -94,14 +84,28 @@ export default function ProjectsPage() {
                       {project.title}
                     </CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground line-clamp-3 leading-relaxed">
+                  <CardContent className="space-y-4">
+                    <p className="text-muted-foreground leading-relaxed">
                       {project.description}
                     </p>
+                    
+                    {project.objectives && (
+                      <div className="pt-4 space-y-2">
+                        <p className="text-sm font-bold text-accent uppercase tracking-wider">Objectifs :</p>
+                        <ul className="space-y-2">
+                          {project.objectives.map((obj, i) => (
+                            <li key={i} className="flex items-start text-sm text-muted-foreground">
+                              <CheckCircle2 className="h-4 w-4 text-primary mr-2 mt-0.5 shrink-0" />
+                              {obj}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </CardContent>
-                  <CardFooter className="pt-0">
+                  <CardFooter className="mt-auto">
                     <Button variant="link" className="p-0 text-primary font-bold group-hover:translate-x-1 transition-transform">
-                      View Details <ExternalLink className="ml-2 h-4 w-4" />
+                      Voir les détails <ExternalLink className="ml-2 h-4 w-4" />
                     </Button>
                   </CardFooter>
                 </Card>

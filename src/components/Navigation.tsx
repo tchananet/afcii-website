@@ -28,7 +28,7 @@ export function Navigation() {
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="text-2xl font-headline font-bold text-accent">
-              AFCII<span className="text-primary">Connect</span>
+              AFCII<span className="text-primary">.</span>
             </Link>
           </div>
 
