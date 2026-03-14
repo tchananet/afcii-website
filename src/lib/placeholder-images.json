@@ -1,3 +1,40 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-sustainability",
+      "description": "Green landscape representing sustainability and growth",
+      "imageUrl": "https://picsum.photos/seed/afcii-1/1200/600",
+      "imageHint": "nature sustainability"
+    },
+    {
+      "id": "innovation-research",
+      "description": "Researchers working in a modern lab environment",
+      "imageUrl": "https://picsum.photos/seed/afcii-2/800/600",
+      "imageHint": "research innovation"
+    },
+    {
+      "id": "community-growth",
+      "description": "People collaborating in a professional setting",
+      "imageUrl": "https://picsum.photos/seed/afcii-3/800/600",
+      "imageHint": "collaboration community"
+    },
+    {
+      "id": "project-energy",
+      "description": "Renewable energy project",
+      "imageUrl": "https://picsum.photos/seed/afcii-4/600/400",
+      "imageHint": "renewable energy"
+    },
+    {
+      "id": "project-education",
+      "description": "Educational training session",
+      "imageUrl": "https://picsum.photos/seed/afcii-5/600/400",
+      "imageHint": "education training"
+    },
+    {
+      "id": "partner-logo-1",
+      "description": "Generic partner logo",
+      "imageUrl": "https://picsum.photos/seed/partner1/200/100",
+      "imageHint": "logo company"
+    }
+  ]
 }
