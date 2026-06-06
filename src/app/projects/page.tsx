@@ -13,32 +13,42 @@ import { ExternalLink, CheckCircle2 } from 'lucide-react';
 const projects = [
   {
     id: 1,
-    title: 'Projet culture du gansang',
-    category: 'Agriculture',
-    status: 'Pilote',
-    description: 'Ce projet vise à étudier les possibilités de domestication et de culture du gansang afin de favoriser sa valorisation économique.',
+    title: 'Domestication du Njangsang',
+    category: 'Recherche & Agriculture',
+    status: 'En cours',
+    description: 'Le Njangsang est un fruit sauvage essentiel. Notre projet de recherche vise à transformer sa cueillette sauvage en une production agricole contrôlée et rentable.',
     objectives: [
-      'Expérimenter la culture',
-      'Analyser la rentabilité',
-      'Promouvoir sa diffusion auprès des agriculteurs'
+      'Étude génétique et agronomique',
+      'Phase d\'expérimentation en pépinière',
+      'Diffusion des protocoles de culture aux paysans'
     ],
-    imgId: 'project-gansang'
+    imgId: 'project-njangsang'
   },
   {
     id: 2,
-    title: 'Projet cultures fruitières innovantes',
-    category: 'Botanique',
-    status: 'Pilote',
-    description: 'Ce projet explore la possibilité d’adapter certaines cultures fruitières exotiques aux conditions locales.',
-    imgId: 'project-fruit'
+    title: 'Incubateur de Startups AFCII',
+    category: 'Économie Sociale',
+    status: 'Actif',
+    description: 'Accompagnement des jeunes porteurs de projets à Yaoundé. Nous offrons un cadre de travail, du mentorat et un soutien technique.',
+    objectives: [
+      'Encadrement stratégique',
+      'Accès aux technologies appropriées',
+      'Mise en réseau avec des investisseurs'
+    ],
+    imgId: 'project-incubation'
   },
   {
     id: 3,
-    title: 'Projet céramique et artisanat',
-    category: 'Artisanat',
-    status: 'Pilote',
-    description: 'Ce projet vise à valoriser les techniques traditionnelles de poterie tout en intégrant des approches innovantes.',
-    imgId: 'project-ceramic'
+    title: 'Vulgarisation du Bio-gaz',
+    category: 'Énergie & Environnement',
+    status: 'Réalisation',
+    description: 'Formation de nos membres et des acteurs locaux à la construction de digesteurs pour une énergie propre et accessible.',
+    objectives: [
+      'Réduction de l\'utilisation du bois de chauffe',
+      'Gestion des déchets organiques',
+      'Autonomie énergétique rurale'
+    ],
+    imgId: 'biogas-seminar'
   }
 ];
 
@@ -50,10 +60,10 @@ export default function ProjectsPage() {
       <main className="flex-grow py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-headline font-bold text-accent mb-4">Page Projets</h1>
-            <p className="text-primary font-bold text-xl uppercase tracking-widest mb-6">Projets pilotes</p>
+            <h1 className="text-4xl md:text-6xl font-headline font-bold text-accent mb-4">Projets & Réalisations</h1>
+            <p className="text-primary font-bold text-xl uppercase tracking-widest mb-6">Impact concret sur le terrain</p>
             <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              L’AFCII développe des projets expérimentaux visant à tester des solutions innovantes avant leur diffusion à grande échelle.
+              L’AFCII transforme ses recherches en projets pilotes pour tester des solutions innovantes adaptées aux réalités locales.
             </p>
           </div>
 
@@ -61,14 +71,13 @@ export default function ProjectsPage() {
             {projects.map((project) => {
               const projectImg = PlaceHolderImages.find(img => img.id === project.imgId);
               return (
-                <Card key={project.id} className="group overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-300 bg-secondary/20">
+                <Card key={project.id} className="group overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-300 bg-secondary/20 flex flex-col">
                   <div className="relative h-64 w-full overflow-hidden">
                     <Image
                       src={projectImg?.imageUrl || ''}
                       alt={projectImg?.description || ''}
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
-                      data-ai-hint={projectImg?.imageHint}
                     />
                     <div className="absolute top-4 left-4">
                       <Badge className="bg-white text-accent hover:bg-white border-none shadow-sm font-bold uppercase tracking-widest text-[10px]">
@@ -84,18 +93,18 @@ export default function ProjectsPage() {
                       {project.title}
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-muted-foreground leading-relaxed">
+                  <CardContent className="space-y-4 flex-grow">
+                    <p className="text-muted-foreground leading-relaxed text-sm">
                       {project.description}
                     </p>
                     
                     {project.objectives && (
                       <div className="pt-4 space-y-2">
-                        <p className="text-sm font-bold text-accent uppercase tracking-wider">Objectifs :</p>
+                        <p className="text-xs font-bold text-accent uppercase tracking-wider">Objectifs clés :</p>
                         <ul className="space-y-2">
                           {project.objectives.map((obj, i) => (
-                            <li key={i} className="flex items-start text-sm text-muted-foreground">
-                              <CheckCircle2 className="h-4 w-4 text-primary mr-2 mt-0.5 shrink-0" />
+                            <li key={i} className="flex items-start text-xs text-muted-foreground">
+                              <CheckCircle2 className="h-3.5 w-3.5 text-primary mr-2 mt-0.5 shrink-0" />
                               {obj}
                             </li>
                           ))}
@@ -103,9 +112,9 @@ export default function ProjectsPage() {
                       </div>
                     )}
                   </CardContent>
-                  <CardFooter className="mt-auto">
+                  <CardFooter className="mt-auto border-t border-secondary/50 pt-4">
                     <Button variant="link" className="p-0 text-primary font-bold group-hover:translate-x-1 transition-transform">
-                      Voir les détails <ExternalLink className="ml-2 h-4 w-4" />
+                      Plus d'informations <ExternalLink className="ml-2 h-4 w-4" />
                     </Button>
                   </CardFooter>
                 </Card>

@@ -7,35 +7,44 @@ import { useLanguage } from '@/context/LanguageContext';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Calendar, ArrowRight, User } from 'lucide-react';
+import { Calendar, ArrowRight, User, Tag } from 'lucide-react';
 
 const news = [
   {
     id: 1,
-    title: 'AFCII Annual Innovation Summit 2024',
-    date: 'Oct 12, 2024',
-    author: 'Admin',
-    excerpt: 'Join us for our biggest event of the year where we discuss the future of sustainable tech in Africa.',
-    category: 'Event',
-    imgId: 'innovation-research'
+    title: 'Recherche appliquée : Vers la domestication du Njangsang',
+    date: '20 Janvier 2024',
+    author: 'Pôle Agro-pastoral',
+    excerpt: 'Le Njangsang, produit traditionnellement sauvage, fait l\'objet d\'une étude approfondie par nos chercheurs pour stabiliser sa production domestique.',
+    category: 'Recherche',
+    imgId: 'project-njangsang'
   },
   {
     id: 2,
-    title: 'New Partnership with Global Green Fund',
-    date: 'Sep 28, 2024',
-    author: 'Marketing',
-    excerpt: 'We are thrilled to announce a multi-year partnership to fund 10 new environmental projects.',
-    category: 'Announcement',
-    imgId: 'community-growth'
+    title: 'Formation Bio-gaz : Nos membres en première ligne',
+    date: '12 Décembre 2023',
+    author: 'Pôle Ingénierie',
+    excerpt: 'Participation active de l\'AFCII à un séminaire de formation technique sur la production de bio-gaz pour les zones rurales.',
+    category: 'Formation',
+    imgId: 'biogas-seminar'
   },
   {
     id: 3,
-    title: 'Understanding the Impact of Renewable Energy',
-    date: 'Sep 15, 2024',
-    author: 'Dr. Sarah J.',
-    excerpt: 'A deep dive into how micro-grids are changing lives in the Sahel region.',
-    category: 'Article',
-    imgId: 'project-energy'
+    title: 'Séminaire Yaoundé : Valorisation des compétences locales',
+    date: '05 Novembre 2023',
+    author: 'Direction AFCII',
+    excerpt: 'Une rencontre stratégique tenue à Yaoundé pour définir les leviers de transformation des talents académiques en solutions économiques.',
+    category: 'Événement',
+    imgId: 'skills-seminar'
+  },
+  {
+    id: 4,
+    title: 'Lancement du programme d\'incubation d\'entreprises',
+    date: '15 Octobre 2023',
+    author: 'Pôle Économie Sociale',
+    excerpt: 'L\'AFCII ouvre ses portes aux jeunes entrepreneurs pour un encadrement technique et stratégique de leurs projets innovants.',
+    category: 'Incubation',
+    imgId: 'project-incubation'
   }
 ];
 
@@ -49,8 +58,8 @@ export default function NewsPage() {
       <main className="flex-grow py-20 bg-secondary/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-headline font-bold text-accent mb-4">{t('nav.news')}</h1>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Stay updated with our latest activities, announcements, and thought leadership articles.</p>
+            <h1 className="text-4xl md:text-6xl font-headline font-bold text-accent mb-4">Actualités & Articles</h1>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Suivez les avancées de nos projets, nos participations aux séminaires et nos dernières découvertes scientifiques.</p>
           </div>
 
           <div className="grid grid-cols-1 gap-12">
@@ -67,8 +76,11 @@ export default function NewsPage() {
                     />
                   </div>
                   <div className="lg:w-1/2 p-8 lg:p-16 flex flex-col justify-center">
-                    <div className="flex items-center space-x-4 mb-6 text-sm text-primary font-bold uppercase tracking-widest">
-                      <span className="px-3 py-1 bg-primary/10 rounded-full">{item.category}</span>
+                    <div className="flex items-center space-x-4 mb-6">
+                      <span className="flex items-center px-3 py-1 bg-primary/10 rounded-full text-primary text-xs font-bold uppercase tracking-widest">
+                        <Tag className="h-3 w-3 mr-2" />
+                        {item.category}
+                      </span>
                     </div>
                     <h2 className="text-3xl font-headline font-bold text-accent mb-6 hover:text-primary transition-colors cursor-pointer leading-tight">
                       {item.title}
@@ -99,7 +111,7 @@ export default function NewsPage() {
 
           <div className="mt-16 text-center">
              <Button className="h-12 px-8 bg-accent hover:bg-accent/90 text-white rounded-full">
-                Load More News
+                Voir plus d'articles
              </Button>
           </div>
         </div>
