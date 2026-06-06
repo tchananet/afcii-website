@@ -5,7 +5,7 @@ import { LanguageProvider } from '@/context/LanguageContext';
 
 export const metadata: Metadata = {
   title: 'AFCII - African Center for Incubation and Innovation',
-  description: 'Plateforme de l\'African Center for Incubation and Innovation (A.F.C.I.I.).',
+  description: 'Plateforme officielle de l\'African Center for Incubation and Innovation (A.F.C.I.I.) - Yaoundé, Cameroun.',
 };
 
 export default function RootLayout({

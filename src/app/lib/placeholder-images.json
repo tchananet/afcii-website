@@ -14,34 +14,52 @@
       "imageHint": "nature sustainability"
     },
     {
-      "id": "biogas-seminar",
-      "description": "Biogas training facility and equipment",
-      "imageUrl": "https://picsum.photos/seed/biogas/800/600",
-      "imageHint": "renewable energy technology"
+      "id": "news-yaounde",
+      "description": "Yaoundé city center during the seminar",
+      "imageUrl": "https://picsum.photos/seed/yaounde-city/800/600",
+      "imageHint": "yaounde city"
     },
     {
-      "id": "skills-seminar",
-      "description": "Professional training session in Yaounde",
-      "imageUrl": "https://picsum.photos/seed/seminar-skills/800/600",
-      "imageHint": "training education"
+      "id": "news-bafoussam",
+      "description": "Business activities in Bafoussam",
+      "imageUrl": "https://picsum.photos/seed/bafoussam/800/600",
+      "imageHint": "african market"
+    },
+    {
+      "id": "news-douala",
+      "description": "Douala business district",
+      "imageUrl": "https://picsum.photos/seed/douala-hub/800/600",
+      "imageHint": "business office"
+    },
+    {
+      "id": "news-sago",
+      "description": "Exhibition at SAGO event",
+      "imageUrl": "https://picsum.photos/seed/sago-event/800/600",
+      "imageHint": "exhibition event"
     },
     {
       "id": "project-njangsang",
-      "description": "Njangsang fruit and tree research",
+      "description": "Njangsang fruit research in Cameroon",
       "imageUrl": "https://picsum.photos/seed/njangsang/800/600",
       "imageHint": "agriculture research"
     },
     {
-      "id": "project-incubation",
-      "description": "Startup workspace and young entrepreneurs",
-      "imageUrl": "https://picsum.photos/seed/incubation/800/600",
-      "imageHint": "startup business office"
+      "id": "biogas-seminar",
+      "description": "Biogas training facility",
+      "imageUrl": "https://picsum.photos/seed/biogas/800/600",
+      "imageHint": "energy technology"
     },
     {
-      "id": "project-ceramic",
-      "description": "Pottery and ceramic craft",
-      "imageUrl": "https://picsum.photos/seed/ceramic/800/600",
-      "imageHint": "pottery craft"
+      "id": "project-incubation",
+      "description": "Startup workspace for young entrepreneurs",
+      "imageUrl": "https://picsum.photos/seed/incubation/800/600",
+      "imageHint": "startup office"
+    },
+    {
+      "id": "community-growth",
+      "description": "Group of African professionals collaborating",
+      "imageUrl": "https://picsum.photos/seed/community/800/600",
+      "imageHint": "african professionals"
     }
   ]
 }

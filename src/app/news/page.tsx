@@ -75,15 +75,18 @@ export default function NewsPage() {
               const newsImg = PlaceHolderImages.find(img => img.id === item.imgId);
               return (
                 <div key={item.id} className={`flex flex-col lg:flex-row bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
-                  <div className="lg:w-1/2 relative min-h-[400px] overflow-hidden">
-                    {newsImg && (
+                  <div className="lg:w-1/2 relative min-h-[400px] overflow-hidden bg-muted">
+                    {newsImg ? (
                       <Image
                         src={newsImg.imageUrl}
                         alt={newsImg.description}
                         fill
                         className="object-cover hover:scale-105 transition-transform duration-700"
                         sizes="(max-width: 1024px) 100vw, 50vw"
+                        data-ai-hint={newsImg.imageHint}
                       />
+                    ) : (
+                      <div className="flex items-center justify-center h-full text-muted-foreground italic">Image bientôt disponible</div>
                     )}
                   </div>
                   <div className="lg:w-1/2 p-8 lg:p-16 flex flex-col justify-center">

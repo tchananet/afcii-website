@@ -23,7 +23,7 @@ const poles = [
     description: "Ce pôle développe des solutions innovantes pour relever les défis de la sécurité alimentaire.",
     icon: Sprout,
     detailsLabel: "Objectifs :",
-    items: ["L’agriculture durable & Agroalimentaire", "Appui aux agriculteurs locaux", "L’expérimentation & Valorisation des ressources"],
+    items: ["Agriculture durable & Agroalimentaire", "Appui aux agriculteurs locaux", "Expérimentation & Valorisation des ressources"],
   },
   {
     title: "Arts, Culture et Lettres",
@@ -76,7 +76,7 @@ export default function PolesPage() {
             <h1 className="text-sm font-black text-primary uppercase tracking-widest mb-6">Structure Technique</h1>
             <h2 className="text-4xl md:text-7xl font-headline font-bold mb-8">Nos 7 Pôles d'Intervention</h2>
             <p className="text-xl text-white/80 max-w-3xl leading-relaxed">
-              L'architecture de l'AFCII reflète une approche multidisciplinaire pour impulser une innovation transversale et durable.
+              L'architecture de l'AFCII reflète une approche multidisciplinaire pour impulser une innovation transversale et durable à travers l'Afrique.
             </p>
           </div>
         </section>
@@ -129,7 +129,7 @@ export default function PolesPage() {
           <div className="max-w-4xl mx-auto px-4">
             <h2 className="text-3xl font-headline font-bold text-accent mb-6">Synergie Interdisciplinaire</h2>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              Chaque pôle n'est pas une île ; ils collaborent pour créer des solutions holistiques. 
+              Chaque pôle collabore pour créer des solutions holistiques. 
               Par exemple, le pôle Juridique protège les brevets nés de l'Ingénierie, tandis que le pôle Agro-pastoral 
               utilise les ressources documentées par nos archivistes.
             </p>
