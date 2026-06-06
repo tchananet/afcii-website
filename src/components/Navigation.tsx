@@ -2,13 +2,12 @@
 "use client";
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 import { Menu, X, Globe, ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Logo } from '@/components/Logo';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -19,7 +18,6 @@ import {
 export function Navigation() {
   const { language, setLanguage, t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
-  const logo = PlaceHolderImages.find(img => img.id === 'afcii-logo');
   const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeJ_Cr3ak73x3Z-pz2O5l5qcc2nLKFUHaDuLCT8I3gGDcpMJg/viewform?usp=publish-editor";
 
   const navItems = [
@@ -38,17 +36,7 @@ export function Navigation() {
         <div className="flex justify-between h-20 items-center">
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center group">
-              {logo && (
-                <div className="relative h-12 w-32 md:h-14 md:w-40 transition-transform group-hover:scale-105">
-                  <Image
-                    src={logo.imageUrl}
-                    alt="AFCII Logo"
-                    fill
-                    className="object-contain"
-                    priority
-                  />
-                </div>
-              )}
+              <Logo className="transition-transform group-hover:scale-105" />
             </Link>
           </div>
 

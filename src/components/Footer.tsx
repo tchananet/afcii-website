@@ -2,35 +2,21 @@
 "use client";
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Logo } from '@/components/Logo';
 
 export function Footer() {
   const { t } = useLanguage();
-  const logo = PlaceHolderImages.find(img => img.id === 'afcii-logo');
   
   return (
     <footer className="bg-accent text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="space-y-6">
-          <Link href="/" className="inline-block">
-            {logo && (
-              <div className="relative h-12 w-32 brightness-0 invert opacity-90">
-                <Image
-                  src={logo.imageUrl}
-                  alt="AFCII Logo"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            )}
+          <Link href="/" className="inline-block group">
+            <Logo light className="transition-transform group-hover:scale-105" />
           </Link>
-          <p className="text-white/50 text-[10px] leading-tight uppercase font-bold tracking-wider">
-            African Centre for Innovation and Incubation
-          </p>
-          <p className="text-muted-foreground text-sm leading-relaxed">
+          <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
             {t('footer.tagline')}
           </p>
           <div className="flex space-x-4 pt-2">
