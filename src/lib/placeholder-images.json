@@ -2,57 +2,57 @@
   "placeholderImages": [
     {
       "id": "hero-sustainability",
-      "description": "Green landscape representing sustainability and growth",
+      "description": "Paysage vert représentant la durabilité et la croissance",
       "imageUrl": "https://picsum.photos/seed/afcii-1/1200/600",
       "imageHint": "nature sustainability"
     },
     {
-      "id": "innovation-research",
-      "description": "Researchers working in a modern lab environment",
-      "imageUrl": "https://picsum.photos/seed/afcii-2/800/600",
-      "imageHint": "research innovation"
+      "id": "news-yaounde",
+      "description": "Vue aérienne de Yaoundé représentant le dynamisme de la capitale",
+      "imageUrl": "https://picsum.photos/seed/yaounde-city/800/600",
+      "imageHint": "yaounde city"
     },
     {
-      "id": "community-growth",
-      "description": "People collaborating in a professional setting",
-      "imageUrl": "https://picsum.photos/seed/afcii-3/800/600",
-      "imageHint": "collaboration community"
+      "id": "news-bafoussam",
+      "description": "Scène urbaine à Bafoussam représentant l'ingéniosité locale",
+      "imageUrl": "https://picsum.photos/seed/bafoussam/800/600",
+      "imageHint": "african city"
     },
     {
-      "id": "project-energy",
-      "description": "Renewable energy project",
-      "imageUrl": "https://picsum.photos/seed/afcii-4/600/400",
-      "imageHint": "renewable energy"
+      "id": "news-douala",
+      "description": "Hub d'affaires à Douala représentant la performance économique",
+      "imageUrl": "https://picsum.photos/seed/douala-hub/800/600",
+      "imageHint": "business office"
     },
     {
-      "id": "project-education",
-      "description": "Educational training session",
-      "imageUrl": "https://picsum.photos/seed/afcii-5/600/400",
-      "imageHint": "education training"
+      "id": "news-sago",
+      "description": "Pavillon d'exposition au salon SAGO",
+      "imageUrl": "https://picsum.photos/seed/sago-event/800/600",
+      "imageHint": "exhibition hall"
     },
     {
-      "id": "project-gansang",
-      "description": "Agriculture and gansang cultivation",
-      "imageUrl": "https://picsum.photos/seed/gansang/800/600",
-      "imageHint": "agriculture farm"
+      "id": "project-njangsang",
+      "description": "Recherche sur la domestication du Njangsang",
+      "imageUrl": "https://picsum.photos/seed/njangsang/800/600",
+      "imageHint": "agriculture research"
     },
     {
-      "id": "project-fruit",
-      "description": "Exotic fruit trees",
-      "imageUrl": "https://picsum.photos/seed/fruit/800/600",
-      "imageHint": "fruit trees"
+      "id": "project-biogas",
+      "description": "Formation sur les technologies de bio-gaz",
+      "imageUrl": "https://picsum.photos/seed/biogas/800/600",
+      "imageHint": "energy technology"
     },
     {
-      "id": "project-ceramic",
-      "description": "Pottery and ceramic craft",
-      "imageUrl": "https://picsum.photos/seed/ceramic/800/600",
-      "imageHint": "pottery craft"
+      "id": "project-incubation",
+      "description": "Jeunes entrepreneurs dans un incubateur",
+      "imageUrl": "https://picsum.photos/seed/incubation/800/600",
+      "imageHint": "startup team"
     },
     {
-      "id": "partner-logo-1",
-      "description": "Generic partner logo",
-      "imageUrl": "https://picsum.photos/seed/partner1/200/100",
-      "imageHint": "logo company"
+      "id": "afcii-logo",
+      "description": "Logo officiel AFCII",
+      "imageUrl": "https://picsum.photos/seed/afcii-logo/300/100",
+      "imageHint": "logo brand"
     }
   ]
 }
