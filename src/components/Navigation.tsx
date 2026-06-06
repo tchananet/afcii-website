@@ -33,9 +33,20 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="flex flex-col">
-              <span className="text-2xl font-headline font-black text-accent leading-none">AFCII<span className="text-primary">.</span></span>
-              <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-tighter">African Center for Incubation and Innovation</span>
+            <Link href="/" className="flex items-center gap-2 group">
+              <div className="flex flex-col">
+                <div className="flex items-baseline gap-0.5">
+                  <div className="w-2 h-2 bg-primary rounded-full mb-1" />
+                  <span className="text-3xl font-bold text-accent tracking-tighter leading-none">afcii</span>
+                  <div className="flex gap-0.5 ml-0.5 mb-5">
+                    <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                    <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                  </div>
+                </div>
+                <span className="text-[8px] font-bold text-accent/60 uppercase tracking-tighter -mt-1 block">
+                  african centre for innovation and incubation
+                </span>
+              </div>
             </Link>
           </div>
 

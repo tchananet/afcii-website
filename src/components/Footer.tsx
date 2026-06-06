@@ -12,14 +12,21 @@ export function Footer() {
     <footer className="bg-accent text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="space-y-4">
-          <h2 className="text-2xl font-headline font-bold">AFCII</h2>
-          <p className="text-muted-foreground text-xs leading-relaxed">
-            African Center for Incubation and Innovation (A.F.C.I.I.)
+          <div className="flex items-baseline gap-0.5">
+            <div className="w-1.5 h-1.5 bg-primary rounded-full mb-1" />
+            <h2 className="text-2xl font-bold tracking-tighter">afcii</h2>
+            <div className="flex gap-0.5 ml-0.5 mb-4">
+              <div className="w-1 h-1 bg-primary rounded-full" />
+              <div className="w-1 h-1 bg-primary rounded-full" />
+            </div>
+          </div>
+          <p className="text-muted-foreground text-[10px] leading-tight uppercase font-bold">
+            African Centre for Innovation and Incubation
           </p>
           <p className="text-muted-foreground text-sm leading-relaxed">
             {t('footer.tagline')}
           </p>
-          <div className="flex space-x-4">
+          <div className="flex space-x-4 pt-2">
             <Facebook className="h-5 w-5 cursor-pointer hover:text-primary transition-colors" />
             <Twitter className="h-5 w-5 cursor-pointer hover:text-primary transition-colors" />
             <Linkedin className="h-5 w-5 cursor-pointer hover:text-primary transition-colors" />
@@ -41,7 +48,6 @@ export function Footer() {
           <h3 className="text-lg font-headline font-bold mb-6">Support</h3>
           <ul className="space-y-4 text-sm text-muted-foreground">
             <li><Link href="/join" className="hover:text-white transition-colors">Adhésion</Link></li>
-            <li><Link href="/partners" className="hover:text-white transition-colors">Partenariat</Link></li>
             <li><Link href="/contact" className="hover:text-white transition-colors">Centre d'aide</Link></li>
           </ul>
         </div>
@@ -49,24 +55,24 @@ export function Footer() {
         <div>
           <h3 className="text-lg font-headline font-bold mb-6">Contact</h3>
           <ul className="space-y-4 text-sm text-muted-foreground">
-            <li className="flex items-center space-x-3">
-              <MapPin className="h-4 w-4 text-primary" />
-              <span>Dakar, Sénégal</span>
+            <li className="flex items-start space-x-3">
+              <MapPin className="h-4 w-4 text-primary shrink-0 mt-1" />
+              <span>Yaoundé, Cameroun</span>
             </li>
             <li className="flex items-center space-x-3">
-              <Phone className="h-4 w-4 text-primary" />
-              <span>+221 33 000 00 00</span>
+              <Phone className="h-4 w-4 text-primary shrink-0" />
+              <span>+237 6XX XX XX XX</span>
             </li>
             <li className="flex items-center space-x-3">
-              <Mail className="h-4 w-4 text-primary" />
+              <Mail className="h-4 w-4 text-primary shrink-0" />
               <span>info@afcii.org</span>
             </li>
           </ul>
         </div>
       </div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-8 border-t border-white/10 text-center text-xs text-muted-foreground">
-        <p>&copy; {new Date().getFullYear()} AFCII. Tous droits réservés.</p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-8 border-t border-white/10 text-center text-[10px] text-muted-foreground uppercase tracking-widest font-bold">
+        <p>&copy; {new Date().getFullYear()} AFCII - African Centre for Innovation and Incubation. Tous droits réservés.</p>
       </div>
     </footer>
   );
