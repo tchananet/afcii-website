@@ -2,11 +2,13 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 import { Menu, X, Globe, ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -17,6 +19,7 @@ import {
 export function Navigation() {
   const { language, setLanguage, t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
+  const logo = PlaceHolderImages.find(img => img.id === 'afcii-logo');
 
   const navItems = [
     { name: t('nav.home'), href: '/' },
@@ -33,20 +36,18 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="flex items-center gap-2 group">
-              <div className="flex flex-col">
-                <div className="flex items-baseline gap-0.5">
-                  <div className="w-2 h-2 bg-primary rounded-full mb-1" />
-                  <span className="text-3xl font-bold text-accent tracking-tighter leading-none">afcii</span>
-                  <div className="flex gap-0.5 ml-0.5 mb-5">
-                    <div className="w-1.5 h-1.5 bg-primary rounded-full" />
-                    <div className="w-1.5 h-1.5 bg-primary rounded-full" />
-                  </div>
+            <Link href="/" className="flex items-center group">
+              {logo && (
+                <div className="relative h-12 w-32 md:h-14 md:w-40 transition-transform group-hover:scale-105">
+                  <Image
+                    src={logo.imageUrl}
+                    alt="AFCII Logo"
+                    fill
+                    className="object-contain"
+                    priority
+                  />
                 </div>
-                <span className="text-[8px] font-bold text-accent/60 uppercase tracking-tighter -mt-1 block">
-                  african centre for innovation and incubation
-                </span>
-              </div>
+              )}
             </Link>
           </div>
 

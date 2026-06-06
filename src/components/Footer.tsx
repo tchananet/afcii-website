@@ -2,25 +2,32 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Footer() {
   const { t } = useLanguage();
+  const logo = PlaceHolderImages.find(img => img.id === 'afcii-logo');
   
   return (
     <footer className="bg-accent text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
-        <div className="space-y-4">
-          <div className="flex items-baseline gap-0.5">
-            <div className="w-1.5 h-1.5 bg-primary rounded-full mb-1" />
-            <h2 className="text-2xl font-bold tracking-tighter">afcii</h2>
-            <div className="flex gap-0.5 ml-0.5 mb-4">
-              <div className="w-1 h-1 bg-primary rounded-full" />
-              <div className="w-1 h-1 bg-primary rounded-full" />
-            </div>
-          </div>
-          <p className="text-muted-foreground text-[10px] leading-tight uppercase font-bold">
+        <div className="space-y-6">
+          <Link href="/" className="inline-block">
+            {logo && (
+              <div className="relative h-12 w-32 brightness-0 invert opacity-90">
+                <Image
+                  src={logo.imageUrl}
+                  alt="AFCII Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            )}
+          </Link>
+          <p className="text-white/50 text-[10px] leading-tight uppercase font-bold tracking-wider">
             African Centre for Innovation and Incubation
           </p>
           <p className="text-muted-foreground text-sm leading-relaxed">
