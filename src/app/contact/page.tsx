@@ -57,7 +57,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg mb-1">Notre Siège</h3>
-                    <p className="text-white/70">Yaoundé, Cameroun</p>
+                    <p className="text-white/70">BP : 2816 Yaoundé, Cameroun</p>
                   </div>
                 </div>
 
@@ -66,8 +66,9 @@ export default function ContactPage() {
                     <Phone className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1">Téléphone</h3>
-                    <p className="text-white/70">+237 6XX XX XX XX</p>
+                    <h3 className="font-bold text-lg mb-1">Téléphones</h3>
+                    <p className="text-white/70">(+237) 670 115 367</p>
+                    <p className="text-white/70">(+237) 670 665 990</p>
                   </div>
                 </div>
 
@@ -77,7 +78,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg mb-1">Email</h3>
-                    <p className="text-white/70">contact@afcii.org</p>
+                    <p className="text-white/70">afciiorg@gmail.com</p>
                   </div>
                 </div>
               </div>

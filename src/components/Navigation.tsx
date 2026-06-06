@@ -20,6 +20,7 @@ export function Navigation() {
   const { language, setLanguage, t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const logo = PlaceHolderImages.find(img => img.id === 'afcii-logo');
+  const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeJ_Cr3ak73x3Z-pz2O5l5qcc2nLKFUHaDuLCT8I3gGDcpMJg/viewform?usp=publish-editor";
 
   const navItems = [
     { name: t('nav.home'), href: '/' },
@@ -77,11 +78,11 @@ export function Navigation() {
                 </DropdownMenuContent>
               </DropdownMenu>
 
-              <Link href="/join">
+              <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer">
                 <Button size="sm" className="bg-primary hover:bg-primary/90 text-white font-bold px-6">
                   {t('nav.join')}
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -112,11 +113,11 @@ export function Navigation() {
                 <button onClick={() => { setLanguage('fr'); setIsOpen(false); }} className={cn("font-bold", language === 'fr' ? "text-primary" : "text-accent")}>FR</button>
                 <button onClick={() => { setLanguage('en'); setIsOpen(false); }} className={cn("font-bold", language === 'en' ? "text-primary" : "text-accent")}>EN</button>
               </div>
-              <Link href="/join" className="w-full">
+              <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer" className="w-full">
                 <Button className="w-full bg-primary h-12" onClick={() => setIsOpen(false)}>
                   {t('nav.join')}
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

@@ -38,7 +38,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.poles': 'Nos Pôles',
     'nav.projects': 'Projets & Réalisations',
     'nav.news': 'Actualités',
-    'nav.join': 'Nous Rejoindre',
+    'nav.join': 'Nous rejoindre',
     'nav.network': 'Réseau International',
     'nav.contact': 'Contact',
     'hero.title': "L'Innovation pour un Avenir Durable",

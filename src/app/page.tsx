@@ -13,6 +13,7 @@ import { ArrowRight, Leaf, Shield, Users, TrendingUp, Lightbulb, GraduationCap }
 export default function Home() {
   const { t } = useLanguage();
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-sustainability');
+  const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeJ_Cr3ak73x3Z-pz2O5l5qcc2nLKFUHaDuLCT8I3gGDcpMJg/viewform?usp=publish-editor";
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -46,11 +47,11 @@ export default function Home() {
                     {t('hero.cta')}
                   </Button>
                 </Link>
-                <Link href="/about" passHref>
+                <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer">
                   <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-10 h-16 text-lg font-bold">
-                    {t('nav.about')}
+                    {t('nav.join')}
                   </Button>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -132,11 +133,11 @@ export default function Home() {
               Que vous soyez chercheur, étudiant, expert de la diaspora ou bailleur de fonds, construisons ensemble l'avenir de l'Afrique.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-6">
-              <Link href="/join" passHref>
+              <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-primary text-white hover:bg-primary/90 px-12 h-16 text-xl font-black rounded-full">
-                  Devenir Membre
+                  Nous rejoindre
                 </Button>
-              </Link>
+              </a>
               <Link href="/contact" passHref>
                 <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 px-12 h-16 text-xl font-black rounded-full">
                   Soutenir l'ONG

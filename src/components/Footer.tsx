@@ -54,7 +54,7 @@ export function Footer() {
         <div>
           <h3 className="text-lg font-headline font-bold mb-6">Support</h3>
           <ul className="space-y-4 text-sm text-muted-foreground">
-            <li><Link href="/join" className="hover:text-white transition-colors">Adhésion</Link></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeJ_Cr3ak73x3Z-pz2O5l5qcc2nLKFUHaDuLCT8I3gGDcpMJg/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Nous rejoindre</a></li>
             <li><Link href="/contact" className="hover:text-white transition-colors">Centre d'aide</Link></li>
           </ul>
         </div>
@@ -64,15 +64,18 @@ export function Footer() {
           <ul className="space-y-4 text-sm text-muted-foreground">
             <li className="flex items-start space-x-3">
               <MapPin className="h-4 w-4 text-primary shrink-0 mt-1" />
-              <span>Yaoundé, Cameroun</span>
+              <span>BP : 2816 Yaoundé, Cameroun</span>
             </li>
-            <li className="flex items-center space-x-3">
-              <Phone className="h-4 w-4 text-primary shrink-0" />
-              <span>+237 6XX XX XX XX</span>
+            <li className="flex items-start space-x-3">
+              <Phone className="h-4 w-4 text-primary shrink-0 mt-1" />
+              <div className="flex flex-col">
+                <span>(+237) 670 115 367</span>
+                <span>(+237) 670 665 990</span>
+              </div>
             </li>
             <li className="flex items-center space-x-3">
               <Mail className="h-4 w-4 text-primary shrink-0" />
-              <span>info@afcii.org</span>
+              <span>afciiorg@gmail.com</span>
             </li>
           </ul>
         </div>
